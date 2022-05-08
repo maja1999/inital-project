@@ -10,6 +10,7 @@ function App() {
       <header className="App-header">
         {toggle ? <img src={logo} className="App-logo" alt="logo" /> : null}
         <button
+          className="my-button"
           onClick={() => {
             setToggle(!toggle);
           }}
