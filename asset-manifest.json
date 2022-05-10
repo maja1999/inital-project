@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/inital-project/static/css/main.08ec843f.css",
-    "main.js": "/inital-project/static/js/main.c4580423.js",
+    "main.css": "/inital-project/static/css/main.04cf26cf.css",
+    "main.js": "/inital-project/static/js/main.a0356e7c.js",
     "static/media/logo.svg": "/inital-project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/inital-project/index.html",
-    "main.08ec843f.css.map": "/inital-project/static/css/main.08ec843f.css.map",
-    "main.c4580423.js.map": "/inital-project/static/js/main.c4580423.js.map"
+    "main.04cf26cf.css.map": "/inital-project/static/css/main.04cf26cf.css.map",
+    "main.a0356e7c.js.map": "/inital-project/static/js/main.a0356e7c.js.map"
   },
   "entrypoints": [
-    "static/css/main.08ec843f.css",
-    "static/js/main.c4580423.js"
+    "static/css/main.04cf26cf.css",
+    "static/js/main.a0356e7c.js"
   ]
 }
