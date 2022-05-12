@@ -1,42 +1,31 @@
-import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Button, Badge } from "reactstrap";
+
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { HomePage } from "./components/HomePage";
+import { AppBar } from "./components/AppBar";
+import { ContactPage } from "./components/ContactPage";
+import { AboutPage } from "./components/AboutPage";
 
 function App() {
-  const [toggle, setToggle] = useState(true);
-  useEffect(() => {
-    if (toggle === true) {
-      toast.success("ToggleOn");
-    } else {
-      toast.warn("ToggleOff");
-    }
-  });
-
   return (
-    <div className="App">
-      <header className="App-header">
-        {toggle ? <img src={logo} className="App-logo" alt="logo" /> : null}
-        <button
-          className="my-button"
-          onClick={() => {
-            setToggle(!toggle);
-          }}
-        >
-          button
-        </button>
-        <div>
-          <Button color="danger">Ne radi</Button>
+    <Router>
+      <div className="App">
+        <AppBar />
+        <div className="App-header">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/Contact" element={<ContactPage />} />
+            <Route path="/About" element={<AboutPage />} />
+          </Routes>
         </div>
-        <div>
-          <Badge color="primary">New</Badge>
-        </div>
-      </header>
-      <ToastContainer autoClose={3000} hideProgressBar />
-    </div>
+
+        <ToastContainer autoClose={3000} hideProgressBar />
+      </div>
+    </Router>
   );
 }
 
